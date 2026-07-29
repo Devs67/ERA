@@ -423,7 +423,8 @@
         var already = b.getAttribute("aria-selected") === "true";
         $$(".tab").forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); });
         Object.keys(TABS).forEach(function (k) { $("#" + TABS[k]).hidden = k !== t; });
-        $("#pick").classList.add("gone");
+        var pick = $("#pick");
+        pick.innerHTML = 'Switch sections above, or <a class="belief-link" href="#believe">read what we believe</a>.';
         closeRail();
         var panel = $("#" + TABS[t]);
         revealIn(panel);
