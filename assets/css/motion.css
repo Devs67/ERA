@@ -153,3 +153,24 @@ table.tech tbody tr{animation:none}
 .tab .tarrow::after{transition:transform .22s cubic-bezier(.22,.9,.3,1)}
 .tab:hover .tarrow::after{transform:translate(-38%,-50%) rotate(45deg)}
 @media (prefers-reduced-motion: reduce){ .tabs,.pick{opacity:1 !important} .tab:hover{transform:none} }
+
+/* ---------- accordions, tiles, flow, flips ---------- */
+.acc-x,.macc{transition:background .2s ease,transform .22s cubic-bezier(.22,.9,.3,1)}
+.acc[open] .acc-x,.mcard[open] .macc{transform:rotate(180deg)}
+.acc-x::after,.macc::after{transition:opacity .2s ease}
+.acc-body>*{animation:riseSoft .38s cubic-bezier(.22,.9,.3,1) both}
+.mbody{animation:riseSoft .34s cubic-bezier(.22,.9,.3,1) both}
+.tile{transition:transform .18s cubic-bezier(.22,.9,.3,1),box-shadow .18s ease}
+.tile:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(19,31,56,.1)}
+.flow li{transition:transform .2s cubic-bezier(.22,.9,.3,1),box-shadow .2s ease}
+.flow li:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(19,31,56,.11)}
+.fn{transition:transform .22s cubic-bezier(.22,.9,.3,1),background .22s ease}
+.flow li:hover .fn{transform:scale(1.12);background:var(--coral)}
+.flip-in{transition:transform .62s cubic-bezier(.4,.02,.2,1)}
+.flip.is-flipped .flip-in{transform:rotateY(180deg)}
+.flip-cue{transition:opacity .2s ease}
+.flip:hover .flip-cue{opacity:.7}
+@media (prefers-reduced-motion: reduce){
+  .flip-in{transition:none}
+  .acc-body>*,.mbody{animation:none}
+}
