@@ -160,48 +160,53 @@
       rows + "</tbody></table>";
   }
 
+  function acc(title, count, note, inner, open) {
+    return '<details class="acc"' + (open ? " open" : "") + '>' +
+      '<summary><span class="acc-t">' + title + '</span>' +
+      '<span class="acc-n">' + count + '</span><i class="acc-x"></i></summary>' +
+      '<div class="acc-body">' + (note ? '<p class="kit-note">' + note + "</p>" : "") +
+      '<div class="tiles">' + inner + "</div></div></details>";
+  }
+
   function buildToolkit() {
     var cls = function (t) {
       return t === "DIY Kit" ? "type-kit" : (t === "Controller" ? "type-controller" : "type-platform");
     };
-    var hw = TOOLKIT.map(function (t) {
-      return '<tr><td><span class="tool-name">' + t.name + "</span></td>" +
-        '<td><span class="tag ' + cls(t.type) + '">' + t.type + "</span></td>" +
-        '<td class="desc">' + t.desc + "</td>" +
-        '<td class="grades">' + (t.inf
-          ? '<span class="inf" title="Inferred from the grade framework — confirm">' + t.grades + "</span>"
-          : t.grades) + "</td></tr>";
+
+    var sw = SOFTWARE.map(function (x) {
+      return '<article class="tile"><a class="tile-name" href="' + x.u +
+        '" target="_blank" rel="noopener">' + x.n + "</a>" +
+        "<p>" + x.d + "</p>" +
+        '<div class="tile-foot"><span class="tag">Grades ' + x.g + "</span>" +
+        '<span class="tag cost">' + x.c + "</span></div></article>";
     }).join("");
 
-    var sw = SOFTWARE.map(function (s) {
-      return '<tr><td><a class="tool-name" href="' + s.u + '" target="_blank" rel="noopener">' + s.n + "</a></td>" +
-        '<td class="desc">' + s.d + "</td>" +
-        '<td class="grades">' + s.g + "</td>" +
-        '<td><span class="tag cost">' + s.c + "</span></td></tr>";
+    var hw = TOOLKIT.map(function (x) {
+      return '<article class="tile"><span class="tile-name">' + x.name + "</span>" +
+        "<p>" + x.desc + "</p>" +
+        '<div class="tile-foot"><span class="tag ' + cls(x.type) + '">' + x.type + "</span>" +
+        '<span class="tag">Grades ' + (x.inf
+          ? '<span class="inf" title="Inferred from the grade framework — confirm">' + x.grades + "</span>"
+          : x.grades) + "</span></div></article>";
     }).join("");
 
-    var partners = PARTNERS.map(function (p) {
-      return '<h3 class="kit-sub">' + p.brand +
-        ' <a class="site-link" href="' + p.site + '" target="_blank" rel="noopener">schools programme &rarr;</a></h3>' +
-        '<table class="tech"><thead><tr><th>Kit</th><th>What it covers</th>' +
-        '<th class="num">Grades</th></tr></thead><tbody>' +
-        p.items.map(function (i) {
-          return '<tr><td><a class="tool-name" href="' + i.u + '" target="_blank" rel="noopener">' + i.n + "</a></td>" +
-            '<td class="desc">' + i.d + "</td><td class=\"grades\">" + i.g + "</td></tr>";
-        }).join("") + "</tbody></table>";
+    var partners = PARTNERS.map(function (pr) {
+      var tiles = pr.items.map(function (i) {
+        return '<article class="tile"><a class="tile-name" href="' + i.u +
+          '" target="_blank" rel="noopener">' + i.n + "</a>" +
+          "<p>" + i.d + "</p>" +
+          '<div class="tile-foot"><span class="tag kit">Grades ' + i.g + "</span></div></article>";
+      }).join("");
+      return acc(pr.brand + " kits", pr.items.length + " kits", "", tiles, false);
     }).join("");
 
     $("#kitview").innerHTML =
-      '<h3 class="kit-sub first">Software</h3>' +
-      '<p class="kit-note">Every tool below is free or free for schools. There are no per-seat software licences anywhere in the programme.</p>' +
-      '<table class="tech"><thead><tr><th>Tool</th><th>What it\'s for</th>' +
-      '<th class="num">Grades</th><th>Cost</th></tr></thead><tbody>' + sw + "</tbody></table>" +
-      '<h3 class="kit-sub">Controllers and boards</h3>' +
-      '<table class="tech"><thead><tr><th>Tool</th><th>Type</th><th>What it is</th>' +
-      '<th class="num">Grades</th></tr></thead><tbody>' + hw + "</tbody></table>" +
-      '<p class="also"><b>Also in the lab</b>' + ALSO.join(" · ") + "</p>" +
-      '<h3 class="kit-sub">Kit partners</h3>' +
-      '<p class="kit-note">Ready-made classroom kits mapped to the modules they serve. Both suppliers run school programmes with curriculum and trainer support alongside the hardware.</p>' +
+      acc("Software", SOFTWARE.length + " tools",
+          "Every tool here is free, or free for schools. There are no per-seat software licences anywhere in the programme.",
+          sw, true) +
+      acc("Controllers and boards", TOOLKIT.length + " boards",
+          "The hardware students actually programme. Also in the lab: " + ALSO.join(" · ") + ".",
+          hw, false) +
       partners;
   }
 
@@ -305,14 +310,14 @@
 
     var cards = mods.length
       ? '<div class="mgrid">' + mods.map(function (m) {
-          return '<article class="mcard">' +
+          return '<details class="mcard"><summary>' +
             '<div class="mtop"><h4>' + m.name + '</h4><span class="mcat">' + m.cat + "</span></div>" +
-            '<p class="mtool">' + m.tool + "</p>" +
+            '<p class="mtool">' + m.tool + "</p><i class=\"macc\"></i></summary>" +
             '<div class="mbody"><div><h5>What they do</h5><ul>' +
             m.acts.map(function (a) { return "<li>" + a + "</li>"; }).join("") +
             "</ul></div><div><h5>By the end</h5><ul>" +
             m.objs.map(function (o) { return "<li>" + o + "</li>"; }).join("") +
-            "</ul></div></div></article>";
+            "</ul></div></div></details>";
         }).join("") + "</div>"
       : '<p class="gnote">The module catalogue runs to Grade 8. Grade 9 carries every strand above at Extend level and feeds straight into the Grade 10 capstone year &mdash; its modules are written per cohort, around the projects students choose.</p>';
 
@@ -343,6 +348,33 @@
       if (b) renderGrade(Number(b.dataset.g));
     });
     renderGrade(1);
+  }
+
+  /* ------------------------------------------------------------ flip cards */
+
+  // Both faces share one height, so the card never jumps mid-flip.
+  function sizeFlips() {
+    $$(".flip").forEach(function (f) {
+      var faces = $$(".flip-face", f);
+      f.style.setProperty("--fh", "auto");
+      var h = faces.reduce(function (m, x) { return Math.max(m, x.scrollHeight); }, 0);
+      f.style.setProperty("--fh", (h + 8) + "px");
+    });
+  }
+
+  function initFlips() {
+    $$(".flip").forEach(function (f) {
+      function toggle() {
+        var on = f.classList.toggle("is-flipped");
+        f.setAttribute("aria-expanded", String(on));
+      }
+      f.addEventListener("click", toggle);
+      f.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+      });
+    });
+    sizeFlips();
+    window.addEventListener("resize", sizeFlips);
   }
 
   /* ------------------------------------------------------------- controls */
@@ -387,7 +419,7 @@
     railLvl = $("#railLvl"); railContent = $("#railContent");
 
     buildMatrix(); buildSpec(); buildToolkit(); buildChips();
-    initReveal(); initProgress();
+    initReveal(); initProgress(); initFlips();
 
     document.addEventListener("click", function (e) {
       var cell = e.target.closest(".cell");
@@ -430,10 +462,11 @@
         revealIn(panel);
         if (t === "curriculum") {
           var on = $$('[data-view][aria-pressed="true"]')[0];
-          if (!on) { on = $('[data-view="map"]'); on.setAttribute("aria-pressed", "true"); }
-          showView(on.dataset.view);
+          if (!on) { on = $('[data-view="grade"]'); on.setAttribute("aria-pressed", "true"); }
+          showView(on.dataset.view || "grade");
         } else {
           animateRows(panel);
+          if (t === "deploy") setTimeout(sizeFlips, 60);
         }
         if (!already) {
           var y = $("#sections").getBoundingClientRect().top + window.scrollY - 14;
