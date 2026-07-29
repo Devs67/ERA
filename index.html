@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Map — Experion Robotics Academy</title>
+<meta name="description" content="A continuous STEM curriculum from PYP 1 to MYP 4 — eight strands, 61 modules, Grades 1 to 9.">
+<meta name="theme-color" content="#131F38">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/motion.css">
+</head>
+<body>
+<!-- ════════════════════ BRAND STORY ════════════════════ -->
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Experion Robotics Academy</p>
+    <h1>Most children are fluent<br>users of technology.<br><em>Almost none are makers of it.</em></h1>
+    <p class="hero-deck">Every child in your school can already operate a phone better than the adults who bought it. Very few know how it works, who decided what it does, or how to bend any of it towards a problem of their own. That gap is the whole reason we exist.</p>
+    <a class="scroll-cue" href="#sections"><span>What we believe</span><i></i></a>
+  </div>
+</header>
+
+<section class="beliefs">
+  <div class="wrap">
+    <p class="eyebrow on-dark">What we believe</p>
+    <div class="bgrid">
+      <article>
+        <span class="bnum">01</span>
+        <h3>The process comes first. The tool comes second.</h3>
+        <p>A child who can define a problem, sketch three ways to solve it and deliberately test the worst one is already doing engineering — whether they are holding a soldering iron or a handful of building blocks. We teach design thinking from Grade 1 and let the technology get harder around it. That order never reverses.</p>
+      </article>
+      <article>
+        <span class="bnum">02</span>
+        <h3>A consumer becomes a maker in one specific moment.</h3>
+        <p>The LED lights. The robot turns. The app speaks back in their own voice. There is a visible before and after in a child's face when something they built actually works, and everything that comes later is easier because of it. Our job is to engineer that moment early, and then again every few weeks.</p>
+      </article>
+      <article>
+        <span class="bnum">03</span>
+        <h3>Using technology well has to be taught.</h3>
+        <p>Between the build and the challenge sits a question children are almost never asked: <em>should this be made at all?</em> Who does it help, who does it leave out, and what does it cost the person using it? A child who has trained a model and watched it fail on somebody unlike themselves understands bias better than any lesson can explain it.</p>
+      </article>
+    </div>
+
+    <div class="how">
+      <p class="how-lead">Which is why every module, in Grade 1 and in Grade 8, has the same three beats.</p>
+      <ol class="how-beats">
+        <li><b>Bootcamp</b><span>One session. The technology on its own terms.</span></li>
+        <li><b>Projects</b><span>Two to three guided builds. Each adds a constraint.</span></li>
+        <li><b>Challenge</b><span>One open problem. No answer key at the back.</span></li>
+      </ol>
+      <p class="how-foot">Nine years of it, from Grade 1 to Grade 9, with nothing taught twice.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" id="sections">
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button type="button" class="tab" data-tab="curriculum" role="tab" aria-selected="false">
+      <b>Curriculum</b><em>8 strands · 61 modules · Grades 1–9</em>
+    </button>
+    <button type="button" class="tab" data-tab="deploy" role="tab" aria-selected="false">
+      <b>Deployment</b><em>Two models, phased</em>
+    </button>
+    <button type="button" class="tab" data-tab="classroom" role="tab" aria-selected="false">
+      <b>In the classroom</b><em>How a module runs</em>
+    </button>
+  </nav>
+  <p class="pick" id="pick">Choose a section to open it.</p>
+
+  <!-- ============ CURRICULUM ============ -->
+  <section id="tab-curriculum" role="tabpanel" hidden>
+    <div class="controls">
+      <div>
+        <span class="ctrl-label" id="lbl-view">View</span>
+        <div class="seg" role="group" aria-labelledby="lbl-view">
+          <button type="button" data-view="map" aria-pressed="true">The ladder</button>
+          <button type="button" data-view="grade" aria-pressed="false">By grade</button>
+          <button type="button" data-view="spec" aria-pressed="false">Grades 5–9 stack</button>
+          <button type="button" data-view="kit" aria-pressed="false">Toolkit</button>
+        </div>
+      </div>
+      <div id="phasewrap">
+        <span class="ctrl-label" id="lbl-ph">Phase</span>
+        <div class="seg" role="group" aria-labelledby="lbl-ph">
+          <button type="button" data-phase="all" aria-pressed="true">All</button>
+          <button type="button" data-phase="pyp" aria-pressed="false">Primary</button>
+          <button type="button" data-phase="myp" aria-pressed="false">Middle</button>
+        </div>
+      </div>
+      <div id="depthwrap">
+        <span class="ctrl-label">Depth</span>
+        <div class="legend">
+          <span class="leg l1"><span class="gauge g1"><b></b><b></b><b></b><b></b></span><span>Introduce</span></span>
+          <span class="leg l2"><span class="gauge g2"><b></b><b></b><b></b><b></b></span><span>Develop</span></span>
+          <span class="leg l3"><span class="gauge g3"><b></b><b></b><b></b><b></b></span><span>Apply</span></span>
+          <span class="leg l4"><span class="gauge g4"><b></b><b></b><b></b><b></b></span><span>Extend</span></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint" id="hint">Select any square to see what that year covers. Select a strand name to walk its full progression.</p>
+
+    <div class="scroller" id="mapview"><div class="matrix" id="matrix"></div></div>
+
+    <div id="gradeview" hidden>
+      <div class="gchips" id="gchips" role="tablist" aria-label="Grade"></div>
+      <div id="gpanel"></div>
+    </div>
+
+    <div class="spec" id="specview" hidden></div>
+    <div class="spec" id="kitview" hidden></div>
+
+    <footer class="foot">
+      <p><strong>Module shape</strong>One bootcamp session, two to three guided builds, one open design-thinking challenge. Identical at every grade — only the complexity and the amount of scaffolding change.</p>
+      <p><strong>Assessment</strong>Each strand carries its own rubric, mapped to MYP Design criteria A–D from Grade 6 onward and to PYP transdisciplinary skills below that.</p>
+      <p><strong>Beyond Grade 9</strong>Grade 10 runs as a capstone year — independent projects, competition entries and portfolios drawing on every strand rather than adding new tools.</p>
+      <p><strong>Software cost</strong>Scratch, Tinkercad, App Inventor, Blynk, GDevelop, Python and KiCad are free. Fusion 360, Figma and Canva are free for education. No per-seat licences anywhere.</p>
+    </footer>
+  </section>
+
+  <!-- ============ DEPLOYMENT ============ -->
+  <section id="tab-deploy" role="tabpanel" hidden>
+    <p class="sec-lead">Two ways to bring the programme in. The curriculum, training and rubrics are identical in both — what changes is who owns the hardware and who carries the work of running it.</p>
+
+    <div class="models">
+      <article class="model">
+        <span class="model-tag">Option A</span>
+        <h3>School-owned,<br>Experion-supported</h3>
+        <p class="model-say">You own the equipment. We provide the programme and get your team running it.</p>
+        <h4>We provide</h4>
+        <ul>
+          <li>Full Grade 1–9 curriculum, lesson plans and rubrics</li>
+          <li>Specced equipment list with vendor recommendations</li>
+          <li>Procurement support through your purchase process</li>
+          <li>Teacher training and certification</li>
+          <li>Termly review and refresher visits</li>
+        </ul>
+        <h4>You handle</h4>
+        <ul>
+          <li>Purchase, installation and asset ownership</li>
+          <li>Day-to-day delivery with your own staff</li>
+          <li>Consumables, spares and upkeep</li>
+        </ul>
+        <p class="model-best">Best when you have the capital budget and the staff bandwidth to run it.</p>
+      </article>
+
+      <article class="model dark">
+        <span class="model-tag">Option B</span>
+        <h3>Turnkey — designed,<br>built and delivered</h3>
+        <p class="model-say">We design, procure, install and commission the lab, then train your staff and run the programme.</p>
+        <h4>Everything in Option A, plus</h4>
+        <ul>
+          <li>Lab design, layout and full bill of materials</li>
+          <li>Procurement, installation and commissioning</li>
+          <li>Experion instructors delivering on site</li>
+          <li>Consumables, maintenance and annual servicing</li>
+          <li>One point of accountability, end to end</li>
+        </ul>
+        <h4>You handle</h4>
+        <ul>
+          <li>Room, power and timetable</li>
+          <li>One package, one invoice</li>
+        </ul>
+        <p class="model-best">Best when you want it live this term without building internal expertise first.</p>
+      </article>
+    </div>
+
+    <h3 class="sub-h">Phased rollout</h3>
+    <p class="sec-lead tight">Either model can be staged. You don't write one large cheque — each phase proves itself before the next begins.</p>
+    <ol class="phases">
+      <li>
+        <span class="ph-n">1</span>
+        <em>Term one</em><b>Primary, mobile</b>
+        <p>Grades 1–5 run on mobile kits inside existing classrooms. No infrastructure required, and the first parent-facing win arrives fastest.</p>
+      </li>
+      <li>
+        <span class="ph-n">2</span>
+        <em>Terms two and three</em><b>Middle school lab</b>
+        <p>The dedicated room is commissioned — electronics benches, 3D printers, secure storage. Grades 6–8 come onto the programme.</p>
+      </li>
+      <li>
+        <span class="ph-n">3</span>
+        <em>Year two</em><b>Full fabrication</b>
+        <p>Capstone studio, competition pipeline, student portfolios and demo days. Grade 9 and the Grade 10 capstone year.</p>
+      </li>
+    </ol>
+
+    <h3 class="sub-h">What the school provides</h3>
+    <p class="sec-lead tight">Deliberately light. Nothing here is specialist equipment — and for Grades 1–5, nothing here is new.</p>
+    <div class="reqs">
+      <article>
+        <b>Space</b>
+        <p>A standard classroom is enough. Grades 1–5 can use an existing room between other lessons; Grades 6–9 need it dedicated, so kits and half-finished builds can stay out.</p>
+      </article>
+      <article>
+        <b>Tables and chairs</b>
+        <p>Basic furniture, arranged so students can work in threes around a shared surface. No benches or specialist workstations needed to start.</p>
+      </article>
+      <article>
+        <b>One device per group of three</b>
+        <p>Laptop, desktop or tablet. It must be <strong>Bluetooth enabled</strong> — most kits pair wirelessly — with a USB port for boards that flash over cable. A class of thirty runs on ten devices.</p>
+      </article>
+      <article>
+        <b>Power and Wi-Fi</b>
+        <p>Sockets within reach of each group, and internet access. Almost every software tool runs in a browser, so device specifications can stay modest.</p>
+      </article>
+      <article>
+        <b>Lockable storage</b>
+        <p>A cupboard in or near the room. Kits have small parts and need to be counted back in at the end of every session.</p>
+      </article>
+      <article>
+        <b>A protected timetable slot</b>
+        <p>A regular weekly period that doesn't get borrowed. The single biggest predictor of whether a programme survives its first year is whether it has a fixed place in the timetable.</p>
+      </article>
+    </div>
+
+    <footer class="foot">
+      <p><strong>Infrastructure</strong>Grades 1–5 need no dedicated space. Grades 6–9 need a room with power points, ventilation for printers, and lockable storage.</p>
+      <p><strong>Scope to confirm</strong>Consumables, filament, replacement parts and annual maintenance sit inside Option B and outside Option A. Both are priced separately in the proposal.</p>
+      <p><strong>Pilot first</strong>One grade band, one term, one room. A pilot converts more often than a full-lab decision, and it costs the school very little to say yes to.</p>
+    </footer>
+  </section>
+
+  <!-- ============ IN THE CLASSROOM ============ -->
+  <section id="tab-classroom" role="tabpanel" hidden>
+    <p class="sec-lead">Setup happens once. After that the classroom settles into a rhythm that repeats, module after module, from Grade 5 through Grade 9.</p>
+
+    <h3 class="sub-h">Once, before teaching starts</h3>
+    <ol class="setup">
+      <li><em>Step one</em><b>Lab designed</b><p>Layout, bill of materials and power planning against your room.</p></li>
+      <li><em>Step two</em><b>Installed and commissioned</b><p>Equipment in, tested, labelled and stored.</p></li>
+      <li><em>Step three</em><b>Teachers trained</b><p>Certification on the tools and the curriculum before any child walks in.</p></li>
+      <li><em>Step four</em><b>Lab launched</b><p>Opening day with students and parents. Module one begins.</p></li>
+    </ol>
+
+    <div class="bleed">
+      <div class="runs">
+        <div class="runs-in">
+          <p class="eyebrow on-dark">Then, every module</p>
+          <h2>Learn it. Build it.<br><em>Then solve something real.</em></h2>
+          <p class="runs-lead">Every module follows the same three beats — in Grade 5 and in Grade 9. Children always know where they are in the arc, and so do their parents.</p>
+          <ol class="beats">
+            <li>
+              <span class="beat-n">01</span>
+              <b>Bootcamp</b><em>First session</em>
+              <p>The technology on its own terms — what it is, what it does, and how to make it do something before the session ends.</p>
+            </li>
+            <li>
+              <span class="beat-n">02</span>
+              <b>Projects</b><em>Two to three builds</em>
+              <p>Guided builds that turn a demonstration into a skill. Each one adds a constraint the last one didn't have.</p>
+            </li>
+            <li>
+              <span class="beat-n">03</span>
+              <b>Design-thinking challenge</b><em>One per module</em>
+              <p>An open real-world problem. Students define it, ideate, prototype and test — with no single right answer waiting at the back of a book.</p>
+            </li>
+          </ol>
+          <p class="runs-foot">Every module ends with something a child can hold up and explain. Grade 5 runs <b>7 modules</b> a year, rising to <b>10 by Grade 9</b> — two projects and one challenge inside each one.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-h">What comes out of it</h3>
+    <div class="outputs">
+      <article><b>Per module</b><p>Two to three finished project builds and one design-thinking challenge solution, each documented by the student.</p></article>
+      <article><b>Per year</b><p>Between 14 and 20 project builds, plus 7 to 10 challenge solutions — evidence a parent can actually see.</p></article>
+      <article><b>Per stage</b><p>A portfolio that grows with the child, ready for showcases, competitions and senior-school applications.</p></article>
+    </div>
+
+    <footer class="foot">
+      <p><strong>Why the challenge matters</strong>The projects teach the tool. The challenge is where students meet an open problem with no answer key — the part that transfers out of the lab.</p>
+      <p><strong>Same shape, rising difficulty</strong>A Grade 5 challenge and a Grade 9 challenge follow the same design-thinking arc. What changes is the complexity of the problem and how much scaffolding is removed.</p>
+      <p><strong>Teacher role</strong>Your staff run the bootcamp and projects after certification. Experion instructors co-teach the first module of each year, then step back.</p>
+    </footer>
+  </section>
+</div>
+
+<aside class="rail" id="rail" aria-live="polite" aria-label="Curriculum detail">
+  <div class="rail-in">
+    <button class="rail-close" id="railClose" aria-label="Close detail">&times;</button>
+    <div class="rail-top">
+      <span class="rail-yr" id="railYr"></span>
+      <h2 id="railTitle"></h2>
+      <span class="rail-lvl" id="railLvl"></span>
+    </div>
+    <div id="railContent"></div>
+  </div>
+</aside>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
