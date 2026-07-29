@@ -125,17 +125,14 @@ a.tool-name{ transition:color .18s ease, border-color .18s ease }
 }
 
 /* ---------- brand story ---------- */
-.hero .eyebrow,.hero h1,.hero-deck,.scroll-cue{opacity:0;
+.hero .eyebrow,.hero h1,.hero-deck,.tabs,.pick{opacity:0;
   animation:riseIn .8s cubic-bezier(.22,.9,.3,1) both}
 .hero .eyebrow{animation-delay:.05s}
 .hero h1{animation-delay:.14s}
 .hero-deck{animation-delay:.28s}
-.scroll-cue{animation-delay:.40s}
+.tabs{animation-delay:.40s}
 .hero h1 em{display:inline-block;opacity:0;animation:riseIn .8s cubic-bezier(.22,.9,.3,1) .34s both}
-.scroll-cue i::after{animation:nudge 1.9s ease-in-out infinite}
-@keyframes nudge{0%,100%{transform:translate(-50%,-80%) rotate(45deg)}
                  50%{transform:translate(-50%,-45%) rotate(45deg)}}
-.scroll-cue i{transition:border-color .2s ease,background .2s ease}
 .bgrid article{transition:background .3s ease}
 .bgrid article:hover{background:rgba(255,255,255,.09)}
 .how-beats li::before{transition:transform .22s cubic-bezier(.22,.9,.3,1)}
@@ -150,3 +147,9 @@ table.tech tbody tr{animation:none}
   animation-delay:var(--d,0ms);transition:transform .18s cubic-bezier(.22,.9,.3,1),box-shadow .18s ease}
 .sstrip-item:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(19,31,56,.1)}
 @media (prefers-reduced-motion: reduce){ .sstrip-item{opacity:1 !important} }
+
+.tab,.tab .tarrow{transition:background .22s ease,box-shadow .22s cubic-bezier(.22,.9,.3,1),transform .2s cubic-bezier(.22,.9,.3,1)}
+.tab:hover{transform:translateY(-3px)}
+.tab .tarrow::after{transition:transform .22s cubic-bezier(.22,.9,.3,1)}
+.tab:hover .tarrow::after{transform:translate(-38%,-50%) rotate(45deg)}
+@media (prefers-reduced-motion: reduce){ .tabs,.pick{opacity:1 !important} .tab:hover{transform:none} }
