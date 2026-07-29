@@ -17,8 +17,8 @@
 <header class="hero">
   <div class="wrap">
     <p class="eyebrow">Experion Robotics Academy</p>
-    <h1>Most children are fluent<br>users of technology.<br><em>Almost none are makers of it.</em></h1>
-    <p class="hero-deck">Every child in your school can already operate a phone better than the adults who bought it. Very few know how it works, who decided what it does, or how to bend any of it towards a problem of their own. That gap is the whole reason we exist.</p>
+    <h1>Children arrive as<br>users of technology.<br><em>They leave as makers of it.</em></h1>
+    <p class="hero-deck">Every child in your school can already operate a phone better than the adults who bought it. Far fewer know how it works, who decided what it does, or how to bend any of it towards a problem of their own. Closing that distance — from using to making — is the whole reason we exist.</p>
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button type="button" class="tab" data-tab="curriculum" role="tab" aria-selected="false">
         <b>Curriculum</b><em>8 strands · 61 modules · Grades 1–9</em><i class="tarrow"></i>
@@ -41,10 +41,10 @@
       <div>
         <span class="ctrl-label" id="lbl-view">View</span>
         <div class="seg" role="group" aria-labelledby="lbl-view">
-          <button type="button" data-view="map" aria-pressed="true">The ladder</button>
-          <button type="button" data-view="grade" aria-pressed="false">By grade</button>
+          <button type="button" data-view="grade" aria-pressed="true">By grade</button>
           <button type="button" data-view="spec" aria-pressed="false">Grades 5–9 stack</button>
           <button type="button" data-view="kit" aria-pressed="false">Toolkit</button>
+          <button type="button" data-view="map" aria-pressed="false">The ladder</button>
         </div>
       </div>
       <div id="phasewrap">
@@ -66,11 +66,11 @@
       </div>
     </div>
 
-    <p class="hint" id="hint">Select any square to see what that year covers. Select a strand name to walk its full progression.</p>
+    <p class="hint" id="hint">One grade at a time — the strands running that year, then every module a child meets. Open a module to see inside it.</p>
 
-    <div class="scroller" id="mapview"><div class="matrix" id="matrix"></div></div>
+    <div class="scroller" id="mapview" hidden><div class="matrix" id="matrix"></div></div>
 
-    <div id="gradeview" hidden>
+    <div id="gradeview">
       <div class="gchips" id="gchips" role="tablist" aria-label="Grade"></div>
       <div id="gpanel"></div>
     </div>
@@ -88,48 +88,81 @@
 
   <!-- ============ DEPLOYMENT ============ -->
   <section id="tab-deploy" role="tabpanel" hidden>
-    <p class="sec-lead">Two ways to bring the programme in. The curriculum, training and rubrics are identical in both — what changes is who owns the hardware and who carries the work of running it.</p>
+    <p class="sec-lead">How the programme reaches a classroom, end to end. We build the lab and train your teachers; your teachers deliver it; we come back to audit quality and report on it.</p>
 
-    <div class="models">
-      <article class="model">
-        <span class="model-tag">Option A</span>
-        <h3>School-owned,<br>Experion-supported</h3>
-        <p class="model-say">You own the equipment. We provide the programme and get your team running it.</p>
-        <h4>We provide</h4>
-        <ul>
-          <li>Full Grade 1–9 curriculum, lesson plans and rubrics</li>
-          <li>Specced equipment list with vendor recommendations</li>
-          <li>Procurement support through your purchase process</li>
-          <li>Teacher training and certification</li>
-          <li>Termly review and refresher visits</li>
-        </ul>
-        <h4>You handle</h4>
-        <ul>
-          <li>Purchase, installation and asset ownership</li>
-          <li>Day-to-day delivery with your own staff</li>
-          <li>Consumables, spares and upkeep</li>
-        </ul>
-        <p class="model-best">Best when you have the capital budget and the staff bandwidth to run it.</p>
+    <h3 class="sub-h">The flow, start to finish</h3>
+    <ol class="flow">
+      <li><span class="fn">1</span><b>Discovery</b><p>Grades, batch sizes, room, power, timetable, budget cycle.</p></li>
+      <li><span class="fn">2</span><b>Proposal</b><p>Both models scoped and priced against what we found.</p></li>
+      <li><span class="fn">3</span><b>Model chosen</b><p>School-owned or turnkey. Phasing agreed.</p></li>
+      <li><span class="fn">4</span><b>Lab designed</b><p>Layout, bill of materials, power and storage plan.</p></li>
+      <li><span class="fn">5</span><b>Installed</b><p>Equipment in, tested, labelled, commissioned.</p></li>
+      <li><span class="fn">6</span><b>Teachers certified</b><p>Your staff trained module by module, before each one runs.</p></li>
+      <li><span class="fn">7</span><b>Launch</b><p>Opening day with students and parents. Module one begins.</p></li>
+      <li><span class="fn">8</span><b>School delivers</b><p>Your certified teachers run every session.</p></li>
+      <li><span class="fn">9</span><b>Quality visits</b><p>We observe live sessions mid-module and score against the rubric.</p></li>
+      <li><span class="fn">10</span><b>Report</b><p>Written findings to leadership — what is working, what to fix.</p></li>
+      <li><span class="fn">11</span><b>Review and scale</b><p>Termly review, refresher training, next phase or next grade band.</p></li>
+    </ol>
+
+    <h3 class="sub-h">Two ways to work together</h3>
+    <p class="sec-lead tight">Curriculum, training and rubrics are identical in both. What changes is who owns the hardware and who carries the work of setting it up. Select a card to see what each includes.</p>
+    <div class="flips">
+      <article class="flip" tabindex="0" role="button" aria-expanded="false" aria-label="Option A, School owned. Select for detail.">
+        <div class="flip-in">
+          <div class="flip-face flip-front">
+            <span class="model-tag">Option A</span>
+            <h3>School-owned,<br>Experion-supported</h3>
+            <p class="model-say">You own the equipment. We provide the programme and get your team running it.</p>
+            <span class="flip-cue">See what's included</span>
+          </div>
+          <div class="flip-face flip-back">
+            <h4>We provide</h4>
+            <ul>
+              <li>Full Grade 1–9 curriculum, lesson plans and rubrics</li>
+              <li>Specced equipment list with vendor recommendations</li>
+              <li>Procurement support through your purchase process</li>
+              <li>Teacher training and certification on every module</li>
+              <li>Quality-check visits and written reports each term</li>
+            </ul>
+            <h4>You handle</h4>
+            <ul>
+              <li>Purchase, installation and asset ownership</li>
+              <li>Delivery of every session, by your own certified staff</li>
+              <li>Consumables, spares and upkeep</li>
+            </ul>
+            <p class="model-best">Best when you have the capital budget and the staff bandwidth to run it.</p>
+            <span class="flip-cue">Back</span>
+          </div>
+        </div>
       </article>
 
-      <article class="model dark">
-        <span class="model-tag">Option B</span>
-        <h3>Turnkey — designed,<br>built and delivered</h3>
-        <p class="model-say">We design, procure, install and commission the lab, then train your staff and run the programme.</p>
-        <h4>Everything in Option A, plus</h4>
-        <ul>
-          <li>Lab design, layout and full bill of materials</li>
-          <li>Procurement, installation and commissioning</li>
-          <li>Experion instructors delivering on site</li>
-          <li>Consumables, maintenance and annual servicing</li>
-          <li>One point of accountability, end to end</li>
-        </ul>
-        <h4>You handle</h4>
-        <ul>
-          <li>Room, power and timetable</li>
-          <li>One package, one invoice</li>
-        </ul>
-        <p class="model-best">Best when you want it live this term without building internal expertise first.</p>
+      <article class="flip dark" tabindex="0" role="button" aria-expanded="false" aria-label="Option B, Turnkey. Select for detail.">
+        <div class="flip-in">
+          <div class="flip-face flip-front">
+            <span class="model-tag">Option B</span>
+            <h3>Turnkey — designed,<br>built and handed over</h3>
+            <p class="model-say">We design, procure, install and commission the lab, then certify your teachers to run it.</p>
+            <span class="flip-cue">See what's included</span>
+          </div>
+          <div class="flip-face flip-back">
+            <h4>Everything in Option A, plus</h4>
+            <ul>
+              <li>Lab design, layout and full bill of materials</li>
+              <li>Procurement, installation and commissioning</li>
+              <li>Consumables, maintenance and annual servicing</li>
+              <li>Deeper training cycle with refreshers each term</li>
+              <li>One point of accountability, end to end</li>
+            </ul>
+            <h4>You handle</h4>
+            <ul>
+              <li>Room, power and timetable</li>
+              <li>Delivery of every session, by your own certified staff</li>
+            </ul>
+            <p class="model-best">Best when you want it live this term without building internal expertise first.</p>
+            <span class="flip-cue">Back</span>
+          </div>
+        </div>
       </article>
     </div>
 
@@ -239,7 +272,8 @@
     <footer class="foot">
       <p><strong>Why the challenge matters</strong>The projects teach the tool. The challenge is where students meet an open problem with no answer key — the part that transfers out of the lab.</p>
       <p><strong>Same shape, rising difficulty</strong>A Grade 5 challenge and a Grade 9 challenge follow the same design-thinking arc. What changes is the complexity of the problem and how much scaffolding is removed.</p>
-      <p><strong>Teacher role</strong>Your staff run the bootcamp and projects after certification. Experion instructors co-teach the first module of each year, then step back.</p>
+      <p><strong>Who teaches</strong>Your teachers do. We certify them on every module before it runs, and they deliver it. Experion does not take the class.</p>
+      <p><strong>Quality checks</strong>We observe a live session mid-module, score it against the same rubric your teachers were trained on, and send leadership a written report — what is landing, what is not, and what to change before the next module.</p>
     </footer>
   </section>
 </div>
