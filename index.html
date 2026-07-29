@@ -19,58 +19,23 @@
     <p class="eyebrow">Experion Robotics Academy</p>
     <h1>Most children are fluent<br>users of technology.<br><em>Almost none are makers of it.</em></h1>
     <p class="hero-deck">Every child in your school can already operate a phone better than the adults who bought it. Very few know how it works, who decided what it does, or how to bend any of it towards a problem of their own. That gap is the whole reason we exist.</p>
-    <a class="scroll-cue" href="#sections"><span>What we believe</span><i></i></a>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button type="button" class="tab" data-tab="curriculum" role="tab" aria-selected="false">
+        <b>Curriculum</b><em>8 strands · 61 modules · Grades 1–9</em><i class="tarrow"></i>
+      </button>
+      <button type="button" class="tab" data-tab="deploy" role="tab" aria-selected="false">
+        <b>Deployment</b><em>Two models, phased</em><i class="tarrow"></i>
+      </button>
+      <button type="button" class="tab" data-tab="classroom" role="tab" aria-selected="false">
+        <b>In the classroom</b><em>How a module runs</em><i class="tarrow"></i>
+      </button>
+    </nav>
+    <p class="pick" id="pick">Choose a section above, or <a class="belief-link" href="#believe">read what we believe</a>.</p>
   </div>
 </header>
 
-<section class="beliefs">
-  <div class="wrap">
-    <p class="eyebrow on-dark">What we believe</p>
-    <div class="bgrid">
-      <article>
-        <span class="bnum">01</span>
-        <h3>The process comes first. The tool comes second.</h3>
-        <p>A child who can define a problem, sketch three ways to solve it and deliberately test the worst one is already doing engineering — whether they are holding a soldering iron or a handful of building blocks. We teach design thinking from Grade 1 and let the technology get harder around it. That order never reverses.</p>
-      </article>
-      <article>
-        <span class="bnum">02</span>
-        <h3>A consumer becomes a maker in one specific moment.</h3>
-        <p>The LED lights. The robot turns. The app speaks back in their own voice. There is a visible before and after in a child's face when something they built actually works, and everything that comes later is easier because of it. Our job is to engineer that moment early, and then again every few weeks.</p>
-      </article>
-      <article>
-        <span class="bnum">03</span>
-        <h3>Using technology well has to be taught.</h3>
-        <p>Between the build and the challenge sits a question children are almost never asked: <em>should this be made at all?</em> Who does it help, who does it leave out, and what does it cost the person using it? A child who has trained a model and watched it fail on somebody unlike themselves understands bias better than any lesson can explain it.</p>
-      </article>
-    </div>
-
-    <div class="how">
-      <p class="how-lead">Which is why every module, in Grade 1 and in Grade 8, has the same three beats.</p>
-      <ol class="how-beats">
-        <li><b>Bootcamp</b><span>One session. The technology on its own terms.</span></li>
-        <li><b>Projects</b><span>Two to three guided builds. Each adds a constraint.</span></li>
-        <li><b>Challenge</b><span>One open problem. No answer key at the back.</span></li>
-      </ol>
-      <p class="how-foot">Nine years of it, from Grade 1 to Grade 9, with nothing taught twice.</p>
-    </div>
-  </div>
-</section>
-
 <div class="wrap" id="sections">
-  <nav class="tabs" role="tablist" aria-label="Sections">
-    <button type="button" class="tab" data-tab="curriculum" role="tab" aria-selected="false">
-      <b>Curriculum</b><em>8 strands · 61 modules · Grades 1–9</em>
-    </button>
-    <button type="button" class="tab" data-tab="deploy" role="tab" aria-selected="false">
-      <b>Deployment</b><em>Two models, phased</em>
-    </button>
-    <button type="button" class="tab" data-tab="classroom" role="tab" aria-selected="false">
-      <b>In the classroom</b><em>How a module runs</em>
-    </button>
-  </nav>
-  <p class="pick" id="pick">Choose a section to open it.</p>
-
-  <!-- ============ CURRICULUM ============ -->
+<!-- ============ CURRICULUM ============ -->
   <section id="tab-curriculum" role="tabpanel" hidden>
     <div class="controls">
       <div>
@@ -278,6 +243,40 @@
     </footer>
   </section>
 </div>
+
+
+<section class="beliefs" id="believe">
+  <div class="wrap">
+    <p class="eyebrow on-dark">What we believe</p>
+    <div class="bgrid">
+      <article>
+        <span class="bnum">01</span>
+        <h3>The process comes first. The tool comes second.</h3>
+        <p>A child who can define a problem, sketch three ways to solve it and deliberately test the worst one is already doing engineering — whether they are holding a soldering iron or a handful of building blocks. We teach design thinking from Grade 1 and let the technology get harder around it. That order never reverses.</p>
+      </article>
+      <article>
+        <span class="bnum">02</span>
+        <h3>A consumer becomes a maker in one specific moment.</h3>
+        <p>The LED lights. The robot turns. The app speaks back in their own voice. There is a visible before and after in a child's face when something they built actually works, and everything that comes later is easier because of it. Our job is to engineer that moment early, and then again every few weeks.</p>
+      </article>
+      <article>
+        <span class="bnum">03</span>
+        <h3>Using technology well has to be taught.</h3>
+        <p>Between the build and the challenge sits a question children are almost never asked: <em>should this be made at all?</em> Who does it help, who does it leave out, and what does it cost the person using it? A child who has trained a model and watched it fail on somebody unlike themselves understands bias better than any lesson can explain it.</p>
+      </article>
+    </div>
+
+    <div class="how">
+      <p class="how-lead">Which is why every module, in Grade 1 and in Grade 8, has the same three beats.</p>
+      <ol class="how-beats">
+        <li><b>Bootcamp</b><span>One session. The technology on its own terms.</span></li>
+        <li><b>Projects</b><span>Two to three guided builds. Each adds a constraint.</span></li>
+        <li><b>Challenge</b><span>One open problem. No answer key at the back.</span></li>
+      </ol>
+      <p class="how-foot">Nine years of it, from Grade 1 to Grade 9, with nothing taught twice.</p>
+    </div>
+  </div>
+</section>
 
 <aside class="rail" id="rail" aria-live="polite" aria-label="Curriculum detail">
   <div class="rail-in">
